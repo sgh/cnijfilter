@@ -40,6 +40,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <png.h>
+#include <string.h>
 
 #include "cpktypes.h"
 #include "cncl.h"
