@@ -3,7 +3,7 @@
 %bcond_with build_common_package
 
 %define VERSION 3.80
-%define RELEASE 1
+%define RELEASE 2
 
 %define _arc  %(getconf LONG_BIT)
 %define _is64 %(if [ `getconf LONG_BIT` = "64" ] ; then  printf "64";  fi)
@@ -34,6 +34,7 @@ BuildRoot: %{_tmppath}/%{name}-root
 #Requires:  cups popt
 Requires: cnijfilter-common >= %{version} cups popt libxml2 gtk2 libtiff libpng
 #BuildRequires: gtk-devel cups-devel 
+Packager: Will Newton
 
 %if %{with build_common_package}
 %package -n cnijfilter-common
