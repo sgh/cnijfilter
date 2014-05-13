@@ -371,13 +371,9 @@ PRIVATE gint initApplication(gint argc, gchar *argv[], gchar *pPrinterName)
 	} /* parents process */
 	else {
 		//for bscc
-		output_dev		Odev;
 	    char			buf[4096];
 
 		memset( buf, 0x00, sizeof(buf) ) ;
-
-		Odev.status = 0;
-		Odev.dev = 0;//device_type;	
 
 		/* Ver.3.70 */
 		if( (backend_Is == CANON_USB_BACKEND_CNIJ_USB) | (backend_Is == CANON_BJNP_BACKEND_CNIJ_NET) ){
@@ -615,7 +611,6 @@ PRIVATE gboolean updateUI(gint backend_Is)
 	static struct timeb	prevTime;
 	static gboolean		initTime = FALSE;
 	//Ver.3.10 for Network
-	output_dev		Odev;
     char			buf[4096];
 	short			select_flag = 0;
 /*** Parameters end ***/
@@ -624,8 +619,6 @@ PRIVATE gboolean updateUI(gint backend_Is)
 	memset( buf, 0x00, sizeof(buf) ) ;
 	//20090202 inistialize
 	memset( statusStr, 0x00, sizeof(statusStr) ) ;
-	Odev.status = 0;
-	Odev.dev = 0;//device_type;	
 
 	if (initTime == FALSE) {
 		initTime = TRUE;
