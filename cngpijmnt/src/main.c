@@ -308,8 +308,8 @@ static short getDeviceURI( const char *pDestName, char *pDeviceURI, short bufSiz
 					*pResponse;					// Pointer to CUPS IPP response.
 	ipp_attribute_t	*pAttribute;				// Pointer to CUPS attributes.
 	cups_lang_t		*pLanguage;					// Pointer to language.
-	char			*pPrinter = NULL;			// Pointer to printer name.
-	char			*pDUri = NULL;				// Pointer to Device uri.
+	const char		*pPrinter = NULL;			// Pointer to printer name.
+	const char		*pDUri = NULL;				// Pointer to Device uri.
 	short			retVal = -1;	// Return value.
 /*** Parameters end ***/
 	

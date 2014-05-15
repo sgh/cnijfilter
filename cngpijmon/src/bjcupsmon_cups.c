@@ -420,7 +420,7 @@ PRIVATE gint getJobID(gchar *pDestName, gchar *pURI, gchar *pServerName, gint *p
 	cups_lang_t		*pLanguage;								// Pointer to language.
 	ipp_jstate_t	jobState = 0;							// Job state.
 	gint			jobID = 0;								// Job ID.
-	gchar			*pJobUserName = NULL;					// User name of print job.
+	const gchar			*pJobUserName = NULL;					// User name of print job.
 	uid_t			userID;									// User ID.
 	struct passwd	*pPasswd;								// Pointer to password structure.
 	gint			retVal = ID_ERR_PRINT_JOB_NOT_EXIST;	// Return value.
@@ -537,8 +537,8 @@ PRIVATE gint getPrinterURI(gchar *pDestName, gchar *pURI, gchar *pServerName, gi
 					*pResponse;					// Pointer to CUPS IPP response.
 	ipp_attribute_t	*pAttribute;				// Pointer to CUPS attributes.
 	cups_lang_t		*pLanguage;					// Pointer to language.
-	gchar			*pPrinter = NULL;			// Pointer to printer name.
-	gchar			*pUri = NULL;				// Pointer to printer uri.
+	const gchar			*pPrinter = NULL;			// Pointer to printer name.
+	const gchar			*pUri = NULL;				// Pointer to printer uri.
 	gchar			*pTemp = NULL;				// Temporary pointer.
 	gint			i;							// Counter.
 	gint			retVal = ID_ERR_NO_ERROR;	// Return value.
@@ -646,8 +646,8 @@ PUBLIC gint getDeviceURI(gchar *pDestName, gchar *pDeviceURI, gint bufSize)
 					*pResponse;					// Pointer to CUPS IPP response.
 	ipp_attribute_t	*pAttribute;				// Pointer to CUPS attributes.
 	cups_lang_t		*pLanguage;					// Pointer to language.
-	gchar			*pPrinter = NULL;			// Pointer to printer name.
-	gchar			*pDUri = NULL;				// Pointer to Device uri.
+	const gchar			*pPrinter = NULL;			// Pointer to printer name.
+	const gchar			*pDUri = NULL;				// Pointer to Device uri.
 	gint			retVal = ID_ERR_NO_ERROR;	// Return value.
 /*** Parameters end ***/
 	
