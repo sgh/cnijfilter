@@ -1,8 +1,8 @@
 #dirs = libs cngpij cngpijmon ppd pstocanonij 
-dirs = libs cngpij cngpijmnt pstocanonij backend backendnet cngpijmon/cnijnpr
+dirs = libs lgmon cngpij cngpijmnt pstocanonij backend backendnet cngpijmon/cnijnpr
 
 scripts=for dir in $(dirs); do\
-			(cd $$dir; make $$target)|| exit 1;\
+			(cd $$dir; ./autogen.sh ; make $$target)|| exit 1;\
 		done
 
 all :
